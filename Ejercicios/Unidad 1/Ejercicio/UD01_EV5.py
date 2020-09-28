@@ -18,6 +18,3 @@ print("El radio vale ", r)
 print("===========")
 print("Longitud de la circunferencia: ", long)
 print("El área del círculo vale: ", a1, " / ", a2)
-
-
-
