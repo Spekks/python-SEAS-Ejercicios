@@ -2,8 +2,10 @@
 
 # Variables:
 x, y, z, a, b = 0, False, 3, 6, 4
+lLista, lLista2 = ["antonia", "paca", "manola"], [1, 2, 3]
+dLista = {}
 
-'''
+
 # Funciones:
 def mayor100(i_num):
     """Función que recibe un parámetro y comprueba si es par o no."""
@@ -36,7 +38,36 @@ while not y:
     x += 1
     if x == 10:
         y = True
-'''
+
 while z < 10:
     z += 1
     print(z, z**2, z**3)
+
+"""Conversión de una lista a diccionario mediante un bucle FOR"""
+
+for i in range(0, len(lLista)):
+    dLista[i+1] = lLista[i]
+
+print(dLista, type(dLista), sep=", ")
+
+for i in range(0, len(lLista)):
+    dLista[lLista2[i]] = lLista[i]
+
+print(dLista, type(dLista), sep=", ")
+
+dLista = dict(zip(lLista2, lLista))
+
+print(dLista, type(dLista), sep=", ")
+
+"""Fusión de dos listas"""
+
+for num in lLista2:
+    if num == 2:
+        lLista.append(num)
+
+print(lLista)
+
+lLista.extend(lLista2)
+
+print(lLista)
+
