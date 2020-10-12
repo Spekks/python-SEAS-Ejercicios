@@ -6,6 +6,7 @@ CE_L = 0.94  # Conversión de euros a libras. 1 euro = .94 libras.
 CD_L = 0.83  # Conversión de dólar a libras. 1 dólar = .83 libras.
 cambio = True
 
+
 """Menú con while y booleano"""
 while cambio:
     """Variables del menú"""
@@ -15,7 +16,7 @@ while cambio:
     y = input("¿A qué moneda quieres cambiar? ")
     control = False
 
-    if x.lower() == "libra" and y.lower() == "dólar":
+    if x.lower() == "libra" and y.lower() == "dólar" or y.lower() == "dolar":
         y1 = (1 / CD_L) * x1
         pluralx, pluraly = "libras", "dólares"
         control = True
@@ -23,11 +24,11 @@ while cambio:
         y1 = (1 / CE_L) * x1
         pluralx, pluraly = "libras", "euros"
         control = True
-    elif x.lower() == "dólar" and y.lower() == "libra":
+    elif x.lower() == "dólar" or x.lower() == "dolar" and y.lower() == "libra":
         y1 = CD_L * x1
         pluralx, pluraly = "dolares", "libras"
         control = True
-    elif x.lower() == "dólar" and y.lower() == "euro":
+    elif x.lower() == "dólar" or x.lower() == "dolar" and y.lower() == "euro":
         y1 = CD_E * x1
         pluralx, pluraly = "dolares", "euros"
         control = True
@@ -35,7 +36,7 @@ while cambio:
         y1 = CE_L * x1
         pluralx, pluraly = "euros", "libras"
         control = True
-    elif x.lower() == "euro" and y.lower() == "dólar":
+    elif x.lower() == "euro" and y.lower() == "dólar" or y.lower() == "dolar":
         y1 = (1 / CD_E) * x1
         pluralx, pluraly = "euros", "dólares"
         control = True
@@ -48,5 +49,5 @@ while cambio:
 
     print("¿Otro cambio? (sí/no):")
     c = input()
-    if c == "no":
+    if c.lower() == "no":
         cambio = False
