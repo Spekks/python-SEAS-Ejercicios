@@ -1,5 +1,5 @@
 # Fichero de pruebas para la Unidad 3: estructuras de control.
-
+'''
 # Variables:
 x, y, z, a, b = 0, False, 3, 6, 4
 lLista, lLista2 = ["antonia", "paca", "manola"], [1, 2, 3]
@@ -70,4 +70,8 @@ print(lLista)
 lLista.extend(lLista2)
 
 print(lLista)
-
+'''
+"""Bucle descendente"""
+n = 10
+for i in range(n, 0, -1):
+    print(i)
